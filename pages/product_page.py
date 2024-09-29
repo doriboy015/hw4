@@ -80,3 +80,11 @@ class ProductPage(BasePage):
     def test_size_and_name(self):
         assert self.product_name_old == self.product_name_new, 'Названия книг не совпадают'
         assert self.product_size_new == self.fin_size_old, 'Стоимость не совпадает'
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should not be"
+
+    def should_be_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is not"

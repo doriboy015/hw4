@@ -13,3 +13,4 @@ class ProductPageLocators():
     PRODUCT_NAME_OLD = (By.CSS_SELECTOR, '.col-sm-6.product_main > h1')
     NEW_SIZE = (By.CSS_SELECTOR, '.alertinner > p > strong')
     OLD_SIZE = (By.CLASS_NAME, 'basket-mini.pull-right.hidden-xs')
+    SUCCESS_MESSAGE = (By.CLASS_NAME, 'alertinner')
