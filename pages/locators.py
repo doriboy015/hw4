@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 
 class MainPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    BASKET_BUTTON = (By.XPATH, '//a[@class="btn btn-default"]')
 
 class LoginPageLocators():
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
@@ -14,3 +15,7 @@ class ProductPageLocators():
     NEW_SIZE = (By.CSS_SELECTOR, '.alertinner > p > strong')
     OLD_SIZE = (By.CLASS_NAME, 'basket-mini.pull-right.hidden-xs')
     SUCCESS_MESSAGE = (By.CLASS_NAME, 'alertinner')
+
+class BasketPageLocators():
+    PRODUCT_CLASS = (By.CLASS_NAME, 'basket-items')
+    TEXT_OUTER = (By.XPATH, '//div[@id="content_inner"][1]')
